@@ -52,7 +52,7 @@ async def nya(ctx):
 
 @client.command(pass_context=True)
 async def yorha(ctx):
-    yorhaMsg = random.choice(['For the glory of Mankind!','You don\'t say.','Become as Gods','Everything that lives is designed to end. We are perpetually trapped in a never-ending spiral of life and death','What is it that separates machines from androids like us?','I—or we machine lifeforms I suppose—have a keen interest in humanity. Love. Family. Religion. War.','This pod has serious concerns about unit A2 cognitive abilities.',"Don't know, Don't Care"])
+    yorhaMsg = random.choice(['For the Glory of Mankind!','You don\'t say.','Become as Gods','Everything that lives is designed to end. We are perpetually trapped in a never-ending spiral of life and death','What is it that separates machines from androids like us?','I—or we machine lifeforms I suppose—have a keen interest in humanity. Love. Family. Religion. War.','This pod has serious concerns about unit A2 cognitive abilities.',"Don't know, Don't Care"])
     await client.say(yorhaMsg)
 
 
