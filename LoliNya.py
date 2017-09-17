@@ -13,9 +13,7 @@ bot_name = "LoliNya"
 
 # Show a random image when using the command !hug
 hugRnd = random.choice([1,2,3,5,6,7,10,11,12,14,16,17,20,21,25,27,30])
-#imageHug = requests.get("https://gifimage.net/wp-content/uploads/2017/01/Anime-hug-GIF-Image-Download-{}".format(hugRnd) + ".gif", stream=True)
-#imageHug = "https://gifimage.net/wp-content/uploads/2017/01/Anime-hug-GIF-Image-Download-{}".format(hugRnd) + ".gif"
-
+imageHug = requests.get("https://media.giphy.com/media/aD1fI3UUWC4/giphy.gif", stream=True)
 
 client = commands.Bot(description=description, command_prefix=bot_prefix)
 
@@ -71,7 +69,7 @@ async def hug(ctx, user: discord.Member = None):
         if user.mention == ctx.message.author.mention:
             hugR = random.choice(["So sad. You must be feeling so lonely... (⋟﹏⋞)","Are you feeling cold?","Nya... so pitiful. (´・ω・｀)","Amaaazing nya! You can actually hug yourself! Congratz {}. (￣ε￣〃)ｂ".format(user.mention),"You hugged yourself! That's a nice improvement!"])
             await client.say(hugR)
-            #await client.send_file(channel, imageHug)
+            await client.send_file(channel, imageHug)
         elif user.name == client.user.name:
             hugR = random.choice(["T-thankies, I-I guess...","Huggu {}. (.づ◡﹏◡)づ.".format(ctx.message.author.mention),"H-hey, what are you touching! You p-perv! (#｀皿´)","Cuddles {}".format(ctx.message.author.mention), "Pedo much {}? (￣︶￣;)".format(ctx.message.author.mention)])
             await client.say(hugR)
