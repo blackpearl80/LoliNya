@@ -65,8 +65,8 @@ async def hug(ctx, user: discord.Member = None):
     if not user:
         hugR = random.choice(["*Evades and throw you a pillow.* H-hey nya, don't try hug me! (/ω＼)","Σ(￣ロ￣lll) da heck you are hugging? Are you crazy?","Nya bruh. If you are so desperate to hug something, t-try a train at 100km/h!","Error 404. Object to hug not found. please try again nya!"])
         await client.say(hugR)
-    elif user.mention == user.mention_everyone:
-        await client.say("Th-this isn't a or-org... I mean everyone as been hugged. (/ε＼*)")
+    #elif user.mention == user.mention_everyone:
+        #await client.say("Th-this isn't a or-org... I mean everyone as been hugged. (/ε＼*)")
     else:
         if user.mention == ctx.message.author.mention:
             hugR = random.choice(["So sad. You must be feeling so lonely... (⋟﹏⋞)","Are you feeling cold?","Nya... so pitiful. (´・ω・｀)","Amaaazing nya! You can actually hug yourself! Congratz {}. (￣ε￣〃)ｂ".format(user.mention),"You hugged yourself! That's a nice improvement!"])
