@@ -13,8 +13,8 @@ bot_name = "LoliNya"
 
 # Show a random image when using the command !hug
 hugRnd = random.choice([1,2,3,5,6,7,10,11,12,14,16,17,20,21,25,27,30])
-imageHug = requests.get("https://gifimage.net/wp-content/uploads/2017/01/Anime-hug-GIF-Image-Download-{}".format(hugRnd) + ".gif", stream=True)
-
+#imageHug = requests.get("https://gifimage.net/wp-content/uploads/2017/01/Anime-hug-GIF-Image-Download-{}".format(hugRnd) + ".gif", stream=True)
+imageHug = "https://gifimage.net/wp-content/uploads/2017/01/Anime-hug-GIF-Image-Download-{}".format(hugRnd) + ".gif"
 
 
 client = commands.Bot(description=description, command_prefix=bot_prefix)
