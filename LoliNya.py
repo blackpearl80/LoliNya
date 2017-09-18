@@ -47,7 +47,7 @@ async def nya(ctx):
     nekoRnd = random.choice(["EM51ap9PlJOJa","VykFoFEFQPT4A","VcGAyTT62OIdq","qWAvh9GmlryEg","yLhsOrnEGiPRe","W2JiHcUyeev5u","jqXH5VeTYNeTu","jCaU8WfesJfH2","j0SAkJD6RchKE","I9rLlXXDOdb7a","AGnyClt29AkEg","l8vODjlQrm2YM","UfZR37U3uqsTe","PGkmhjuq9MdVK","zqg9QNFbbtkqY","4JpvyNYuyf0aI","13b39zZL7zioaQ","8s2HN6SdyQd1K","KmajZqcgbSRxK"])
     channel = ctx.message.channel
     response = requests.get("https://media.giphy.com/media/" + nekoRnd + "/giphy.gif", stream=True)
-    nya = random.choice(['Nya', 'Nyo!', 'Purssss', 'meow','Someone said nya!? Nya!',"Nya? Nyaa... Nya nya. *licks her paws*. Nya."])
+    nya = random.choice(['Nya! =ටᆼට=', 'Nyo!', '*Purssss intensify*', 'Meow Meow ㅇㅅㅇ','Someone said nya!? Nya!',"Nya? Nyaa... Nya nya. *licks her paws*. Nya. (⁎˃ᆺ˂)","Nekomimi image alert incoming! Nya!","D-do you Nya too? (ΦωΦ)","Nekos are the best, don't you think {}!? *Purrs*".format(ctx.message.author.mention)])
     await client.send_file(channel, io.BytesIO(response.raw.read()), filename=nekoRnd + ".gif", content=nya)
 
 
