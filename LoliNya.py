@@ -65,9 +65,9 @@ async def hug(ctx, user: discord.Member = None):
             hugR = random.choice(["So sad. You must be feeling so lonely... (⋟﹏⋞)","Are you feeling cold?","Nya... so pitiful. (´・ω・｀)","Amaaazing nya! You can actually hug yourself! Congratz {}. (￣ε￣〃)ｂ".format(user.mention),"You hugged yourself! That's a nice improvement!"])
             #await client.say(hugR)
             # Show a random image when using the command !hug
-            #hugRnd = random.choice([1,2,3,5,6,7,10,11,12,14,16,17,20,21,25,27,30])
+            hugRnd = random.choice(["19RCm0P","1jHFQUj","1dCedvY","29j15Qn","28ZYTyu","10HkAqy","YZr6Eo","1cjIoWL","1c3Jnpv","28TfPmK","1USczGB"])
             channel = ctx.message.channel
-            response = requests.get("http://gph.is/28ZOFOM")
+            response = requests.get("http://gph.is/" + hugRnd)
             await client.send_file(channel, io.BytesIO(response.raw.read()), filename="hug.gif", content=hugR)
         elif user.name == client.user.name:
             hugR = random.choice(["T-thankies, I-I guess...","Huggu {}. (.づ◡﹏◡)づ.".format(ctx.message.author.mention),"H-hey, what are you touching! You p-perv! (#｀皿´)","Cuddles {}".format(ctx.message.author.mention), "Pedo much {}? (￣︶￣;)".format(ctx.message.author.mention)])
