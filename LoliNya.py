@@ -43,8 +43,12 @@ async def ping(ctx):
 
 @client.command(pass_context=True)
 async def nya(ctx):
-    nyan = random.choice(['Nya', 'Nyo!', 'Purssss', 'meow'])
-    await client.say(nyan)
+    # Show a random image when using the command !nya
+    nekoRnd = random.choice(["EM51ap9PlJOJa","VykFoFEFQPT4A","VcGAyTT62OIdq","qWAvh9GmlryEg","yLhsOrnEGiPRe","W2JiHcUyeev5u","jqXH5VeTYNeTu","jCaU8WfesJfH2","j0SAkJD6RchKE","I9rLlXXDOdb7a","AGnyClt29AkEg","l8vODjlQrm2YM","UfZR37U3uqsTe","PGkmhjuq9MdVK","zqg9QNFbbtkqY","4JpvyNYuyf0aI","13b39zZL7zioaQ","8s2HN6SdyQd1K","KmajZqcgbSRxK"])
+    channel = ctx.message.channel
+    response = requests.get("https://media.giphy.com/media/" + nekoRnd + "/giphy.gif", stream=True)
+    nya = random.choice(['Nya', 'Nyo!', 'Purssss', 'meow','Someone said nya!? Nya!',"Nya? Nyaa... Nya nya. *licks her paws*. Nya."])
+    await client.send_file(channel, io.BytesIO(response.raw.read()), filename=nekoRnd + ".gif", content=nya)
 
 
 @client.command(pass_context=True)
@@ -78,7 +82,7 @@ async def hug(ctx, user: discord.Member = None):
 
 @client.command(pass_context=True)
 async def slap(ctx, user: discord.User = None):
-    # Show a random image when using the command !hug
+    # Show a random image when using the command !slap
     slapRnd = random.choice(["ayYEBVLyVC9iw","iREUC7qrjN4vC","Zau0yrl17uzdK","4nHsalgvIblUk","zRlGxKCCkatIQ","81kHQ5v9zbqzC","fNdolDfnVPKNi","jLeyZWgtwgr2U","VEmm8ngZxwJ9K","LB1kIoSRFTC2Q"])
     channel = ctx.message.channel
     response = requests.get("https://media.giphy.com/media/" + slapRnd + "/giphy.gif", stream=True)
