@@ -13,7 +13,7 @@ bot_name = "LoliNya"
 
 # Show a random image when using the command !hug
 hugRnd = random.choice([1,2,3,5,6,7,10,11,12,14,16,17,20,21,25,27,30])
-imageHug = requests.get("https://media.giphy.com/media/aD1fI3UUWC4/giphy.gif", stream=True)
+imageHug = requests.get("http://gph.is/28ZOFOM", stream=True)
 
 client = commands.Bot(description=description, command_prefix=bot_prefix)
 
