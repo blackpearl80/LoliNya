@@ -55,7 +55,6 @@ async def yorha(ctx):
 
 @client.command(pass_context=True)
 async def hug(ctx, user: discord.Member = None):
-    channel = ctx.message.channel
     if not user:
         hugR = random.choice(["*Evades and throw you a pillow.* H-hey nya, don't try hug me! (/ω＼)","Σ(￣ロ￣lll) da heck you are hugging? Are you crazy?","Nya bruh. If you are so desperate to hug something, t-try a train at 100km/h!","Error 404. Object to hug not found. please try again nya!"])
         await client.say(hugR)
@@ -67,7 +66,8 @@ async def hug(ctx, user: discord.Member = None):
             #await client.say(hugR)
             # Show a random image when using the command !hug
             #hugRnd = random.choice([1,2,3,5,6,7,10,11,12,14,16,17,20,21,25,27,30])
-            response = requests.get("https://gph.is/28ZOFOM")
+            channel = ctx.message.channel
+            response = requests.get("http://gph.is/28ZOFOM")
             await client.send_file(channel, io.BytesIO(response.raw.read()), filename="hug.gif", content=hugR)
         elif user.name == client.user.name:
             hugR = random.choice(["T-thankies, I-I guess...","Huggu {}. (.づ◡﹏◡)づ.".format(ctx.message.author.mention),"H-hey, what are you touching! You p-perv! (#｀皿´)","Cuddles {}".format(ctx.message.author.mention), "Pedo much {}? (￣︶￣;)".format(ctx.message.author.mention)])
