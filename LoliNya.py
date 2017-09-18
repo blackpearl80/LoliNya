@@ -71,10 +71,12 @@ async def hug(ctx, user: discord.Member = None):
             await client.send_file(channel, io.BytesIO(response.raw.read()), filename=hugRnd + ".gif", content=hugR)
         elif user.name == client.user.name:
             hugR = random.choice(["T-thankies, I-I guess...","Huggu {}. (.づ◡﹏◡)づ.".format(ctx.message.author.mention),"H-hey, what are you touching! You p-perv! (#｀皿´)","Cuddles {}".format(ctx.message.author.mention), "Pedo much {}? (￣︶￣;)".format(ctx.message.author.mention)])
-            await client.say(hugR)
+            #await client.say(hugR)
+            await client.send_file(channel, io.BytesIO(response.raw.read()), filename=hugRnd + ".gif", content=hugR)
         else:
             hugR = random.choice(["{0}, this is a huggie huggie from {1}. ⊂((・▽・))⊃".format(user.mention,ctx.message.author.mention),"A lovely and warm hug to you, {}. ლ(´ ❥ `ლ)".format(user.mention),"You've been hugged, {}. ლ(･ω･*ლ)".format(user.mention)])
-            await client.say(hugR)
+            #await client.say(hugR)
+            await client.send_file(channel, io.BytesIO(response.raw.read()), filename=hugRnd + ".gif", content=hugR)
 
 
 @client.command(pass_context=True)
