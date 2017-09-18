@@ -55,9 +55,6 @@ async def yorha(ctx):
 
 @client.command(pass_context=True)
 async def hug(ctx, user: discord.Member = None):
-# Show a random image when using the command !hug
-    #hugRnd = random.choice([1,2,3,5,6,7,10,11,12,14,16,17,20,21,25,27,30])
-    response = requests.get("http://gph.is/28ZOFOM", stream=True)
     channel = ctx.message.channel
     if not user:
         hugR = random.choice(["*Evades and throw you a pillow.* H-hey nya, don't try hug me! (/ω＼)","Σ(￣ロ￣lll) da heck you are hugging? Are you crazy?","Nya bruh. If you are so desperate to hug something, t-try a train at 100km/h!","Error 404. Object to hug not found. please try again nya!"])
@@ -68,6 +65,9 @@ async def hug(ctx, user: discord.Member = None):
         if user.mention == ctx.message.author.mention:
             hugR = random.choice(["So sad. You must be feeling so lonely... (⋟﹏⋞)","Are you feeling cold?","Nya... so pitiful. (´・ω・｀)","Amaaazing nya! You can actually hug yourself! Congratz {}. (￣ε￣〃)ｂ".format(user.mention),"You hugged yourself! That's a nice improvement!"])
             #await client.say(hugR)
+            # Show a random image when using the command !hug
+            #hugRnd = random.choice([1,2,3,5,6,7,10,11,12,14,16,17,20,21,25,27,30])
+            response = requests.get("http://gph.is/28ZOFOM", stream=True)
             await client.send_file(channel, io.BytesIO(response.raw.read()), filename="Hug.gif", content=hugR)
         elif user.name == client.user.name:
             hugR = random.choice(["T-thankies, I-I guess...","Huggu {}. (.づ◡﹏◡)づ.".format(ctx.message.author.mention),"H-hey, what are you touching! You p-perv! (#｀皿´)","Cuddles {}".format(ctx.message.author.mention), "Pedo much {}? (￣︶￣;)".format(ctx.message.author.mention)])
