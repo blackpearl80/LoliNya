@@ -56,7 +56,7 @@ async def yorha(ctx):
 @client.command(pass_context=True)
 async def hug(ctx, user: discord.Member = None):
     # Show a random image when using the command !hug
-    hugRnd = random.choice(["a5s3dI6Wv1Qcw","aVmEsdMmCTqSs","od5H3PmEG5EVq","9bbIQ1ZUgHbqw","xZshtXrSgsRHy","IRUb7GTCaPU8E","3ZnBrkqoaI2hq","aD1fI3UUWC4","DjczAlIcyK1Co","3bqtLDeiDtwhq","GMFUrC8E8aWoo"])
+    hugRnd = random.choice(["a5s3dI6Wv1Qcw","aVmEsdMmCTqSs","od5H3PmEG5EVq","9bbIQ1ZUgHbqw","xZshtXrSgsRHy","IRUb7GTCaPU8E","3ZnBrkqoaI2hq","aD1fI3UUWC4","DjczAlIcyK1Co","3bqtLDeiDtwhq","GMFUrC8E8aWoo","Tog1tiXFFqZji","wxpvOKvCGf82Y"])
     channel = ctx.message.channel
     response = requests.get("https://media.giphy.com/media/" + hugRnd + "/giphy.gif", stream=True)
     if not user:
