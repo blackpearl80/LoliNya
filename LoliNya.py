@@ -12,9 +12,9 @@ bot_prefix = "!"
 bot_name = "LoliNya"
 
 # Show a random image when using the command !hug
-hugRnd = random.choice(["19RCm0P","1jHFQUj","1dCedvY","29j15Qn","28ZYTyu","10HkAqy","YZr6Eo","1cjIoWL","1c3Jnpv","28TfPmK","1USczGB"])
+hugRnd = random.choice(["a5s3dI6Wv1Qcw","aVmEsdMmCTqSs","od5H3PmEG5EVq","9bbIQ1ZUgHbqw","xZshtXrSgsRHy","IRUb7GTCaPU8E","3ZnBrkqoaI2hq","aD1fI3UUWC4","DjczAlIcyK1Co","3bqtLDeiDtwhq","GMFUrC8E8aWoo"])
 #channel = ctx.message.channel
-response = requests.get("http://gph.is/" + hugRnd, stream=True)
+response = requests.get("https://media.giphy.com/media/" + hugRnd + "/giphy.gif", stream=True)
 
 client = commands.Bot(description=description, command_prefix=bot_prefix)
 
@@ -69,7 +69,7 @@ async def hug(ctx, user: discord.Member = None):
         if user.mention == ctx.message.author.mention:
             hugR = random.choice(["So sad. You must be feeling so lonely... (⋟﹏⋞)","Are you feeling cold?","Nya... so pitiful. (´・ω・｀)","Amaaazing nya! You can actually hug yourself! Congratz {}. (￣ε￣〃)ｂ".format(user.mention),"You hugged yourself! That's a nice improvement!"])
             #await client.say(hugR)
-            await client.send_file(ctx.message.channel, io.BytesIO(response.raw.read()), filename=hugRnd + ".gif", content=hugR)
+            await client.send_file(ctx.message.channel, io.BytesIO(response.raw.read()), filename="hug.gif", content=hugR)
         elif user.name == client.user.name:
             hugR = random.choice(["T-thankies, I-I guess...","Huggu {}. (.づ◡﹏◡)づ.".format(ctx.message.author.mention),"H-hey, what are you touching! You p-perv! (#｀皿´)","Cuddles {}".format(ctx.message.author.mention), "Pedo much {}? (￣︶￣;)".format(ctx.message.author.mention)])
             await client.say(hugR)
