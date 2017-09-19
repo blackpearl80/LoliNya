@@ -70,7 +70,7 @@ async def hug(ctx, user: discord.Member = None):
         #await client.say("Th-this isn't a or-org... I mean everyone as been hugged. (/ε＼*)")
     else:
         if user.mention == ctx.message.author.mention:
-            hugR = random.choice(["So sad. You must be feeling so lonely... (⋟﹏⋞)","Are you feeling cold?","Nya... so pitiful. (´・ω・｀)","Amaaazing nya! You can actually hug yourself! Congratz {}. (￣ε￣〃)ｂ".format(user.mention),"You hugged yourself! That's a nice improvement!"])
+            hugR = random.choice(["So sad. You must be feeling so lonely... (⋟﹏⋞)","Are you feeling cold?","Nya... so pitiful. (´・ω・｀)","Amaaazing nya! You can actually hug yourself! Congratz {}. (￣ε￣〃)ｂ".format(ctx.message.author.mention),"You hugged yourself! That's a nice improvement!"])
             await client.send_file(channel, io.BytesIO(response.raw.read()), filename=hugRnd + ".gif", content=hugR)
         elif user.name == client.user.name:
             hugR = random.choice(["T-thankies, I-I guess...","Huggu {}. (.づ◡﹏◡)づ.".format(ctx.message.author.mention),"H-hey, what are you touching! You p-perv! (#｀皿´)","Cuddles {}".format(ctx.message.author.mention), "Pedo much {}? (￣︶￣;)".format(ctx.message.author.mention)])
@@ -79,6 +79,27 @@ async def hug(ctx, user: discord.Member = None):
             hugR = random.choice(["{0}, this is a huggie huggie from {1}. ⊂((・▽・))⊃".format(user.mention,ctx.message.author.mention),"A lovely and warm hug to you, {}. ლ(´ ❥ `ლ)".format(user.mention),"You've been hugged, {}. ლ(･ω･*ლ)".format(user.mention),"Hug {} tight. I want a huggu too, nya. (◕︿◕✿)".format(user.mention)])
             await client.send_file(channel, io.BytesIO(response.raw.read()), filename=hugRnd + ".gif", content=hugR)
 
+@client.command(pass_context=True)
+async def pet(ctx, user: discord.Member = None):
+    # Show a random image when using the command !pet
+    petRnd = random.choice(["ZGXGE1F1l8OY0","k5ganPlCBq1uU","BxdqaKAfdcCsg","QJpNqJJtBnkwU","lq72vRtxJtpgQ","4HP0ddZnNVvKU","xLm9fux5DSodq","ERUkEhOS1diV2","iM0nTZDrFMPOE","e7xQm1dtF9Zni","r61gZfqvJZMtO","lZnEy2UefUZvq","SvQ7tWn8zeY2k","L2z7dnOduqEow","X9MUeQelKifU4","iGZJRDVEM6iOc"])
+    channel = ctx.message.channel
+    response = requests.get("https://media.giphy.com/media/" + petRnd + "/giphy.gif", stream=True)
+    if not user:
+        petR = random.choice(["P-pet me please! (* >ω<)=3","Are you trying to pet someone? (๑˃̵ᴗ˂̵)و","Pets are good nya! (￣∇￣)","I would love that pet. Can I have one please, nya? （●＞ω＜●）"])
+        await client.say(petR)
+    #elif user.mention == user.mention_everyone:
+        #await client.say("Th-this isn't a or-org... I mean everyone as been hugged. (/ε＼*)")
+    else:
+        if user.mention == ctx.message.author.mention:
+            petR = random.choice(["Y-you can't seriously pet yourself nya... Σ(ﾟДﾟ)","Are you brushing your hairs just to look cool? (ー∀ー；)","Does pet yourself feels good, {}?".format(ctx.message.author.mention),"Try and find someone else to pet instead yourself! (´ε｀；)","M-maybe I'll let you pet me if you are nice."])
+            await client.send_file(channel, io.BytesIO(response.raw.read()), filename=petRnd + ".gif", content=petR)
+        elif user.name == client.user.name:
+            petR = random.choice(["Pets feels so good! *purrrrs* (=^_^=)","Thankies {}, pet me more nya! (=①ω①=)".format(ctx.message.author.mention),"Is not that I asked for it but thanks... (=ｘェｘ=)","*Blushu* One more, I love pets. (ᗒᗨᗕ)"])
+            await client.send_file(channel, io.BytesIO(response.raw.read()), filename=petRnd + ".gif", content=petR)
+        else:
+            petR = random.choice(["Have a pat {}".format(user.mention),"Someone sent you a pat, {}".format(user.mention),"Pettu-pettu {}. Nyaaa, so cute.".formay(user.mention),"Pat {0}. H-hey, I'm jelous! Pet me too {1}!! |ω・｀)".format(user.mention, ctx.message.author.mention),"Sending a pet to {}. Mission complete NYU!".format(user.mention)])
+            await client.send_file(channel, io.BytesIO(response.raw.read()), filename=petRnd + ".gif", content=petR)
 
 @client.command(pass_context=True)
 async def slap(ctx, user: discord.User = None):
@@ -92,7 +113,7 @@ async def slap(ctx, user: discord.User = None):
         await client.say(slapMsg)
     else:
         if user.mention == ctx.message.author.mention:
-            slapMsg = random.choice(['Should I slap you instead? （≧ｙ≦＊）', 'Such violence (つ﹏⊂), a-are you hurt {}?'.format(user.mention)])
+            slapMsg = random.choice(['Should I slap you instead? （≧ｙ≦＊）', 'Such violence (つ﹏⊂), a-are you hurt {}?'.format(ctx.message.author.mention)])
             await client.send_file(channel, io.BytesIO(response.raw.read()), filename=slapRnd + ".gif", content=slapMsg)
         elif user.name == client.user.name:
             slapMsg = random.choice(["Hey, why are you slapping me!? ༼☯﹏☯༽",
