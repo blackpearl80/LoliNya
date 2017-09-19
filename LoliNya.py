@@ -141,11 +141,12 @@ async def bot(ctx):
 )
     embed.add_field(
     name="NEW COMMANDS",
-    value="1: !slap (good for the meanies!)\n"
-    "2: !hug (love is in the air~)\n"
-    "3: !yorha (for those that feels a bit \"android\")\n"
+    value="1: !slap (Good for the meanies!)\n"
+    "2: !hug (Love is in the air~)\n"
+    "3: !yorha (For those that feels a bit \"android\")\n"
     "4: !bot (Huh? Don't you remember me, nya? *puppy eyes*)\n" 
-    "5: !nya (because everyone is a kitten inside)\n",
+    "5: !nya (Because everyone is a kitten inside)\n"
+    "6: !pet (Who doesn't love pet?)",
     inline=False
 )
     embed.set_image(url="https://cdn.discordapp.com/attachments/356158413861814273/356237516585566208/5ka93GJ.png")
