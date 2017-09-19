@@ -98,7 +98,7 @@ async def pet(ctx, user: discord.Member = None):
             petR = random.choice(["Pets feels so good! *purrrrs* (=^_^=)","Thankies {}, pet me more nya! (=①ω①=)".format(ctx.message.author.mention),"Is not that I asked for it but thanks... (=ｘェｘ=)","*Blushu* One more, I love pets. (ᗒᗨᗕ)"])
             await client.send_file(channel, io.BytesIO(response.raw.read()), filename=petRnd + ".gif", content=petR)
         else:
-            petR = random.choice(["Have a pat {}".format(user.mention),"Someone sent you a pat, {}".format(user.mention),"Pettu-pettu {}. Nyaaa, so cute.".formay(user.mention),"Pat {0}. H-hey, I'm jelous! Pet me too {1}!! |ω・｀)".format(user.mention, ctx.message.author.mention),"Sending a pet to {}. Mission complete NYU!".format(user.mention)])
+            petR = random.choice(["Have a pat {}".format(user.mention),"Someone sent you a pat, {}".format(user.mention),"Pettu-pettu {}. Nyaaa, so cute.".format(user.mention),"Pat {0}. H-hey, I'm jelous! Pet me too {1}!! |ω・｀)".format(user.mention, ctx.message.author.mention),"Sending a pet to {}. Mission complete NYU!".format(user.mention)])
             await client.send_file(channel, io.BytesIO(response.raw.read()), filename=petRnd + ".gif", content=petR)
 
 @client.command(pass_context=True)
