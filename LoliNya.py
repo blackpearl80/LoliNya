@@ -125,6 +125,27 @@ async def slap(ctx, user: discord.User = None):
             await client.send_file(channel, io.BytesIO(response.raw.read()), filename=slapRnd + ".gif", content=slapMsg)
 
 @client.command(pass_context=True)
+async def spank(ctx, user: discord.User = None):
+    # Show a random image when using the command !spank
+    spankRnd = random.choice(["5JfmRGx","8ea38Q7","xbU26Le","oLxhBlr","iD8W5KK","nSBsk3Y","2b4B4dZ","khdUQwu","Ha17MT3","MWKUWfq"])
+    channel = ctx.message.channel
+    response = requests.get("https://imgur.com/" + spankRnd + ".gif", stream=True)
+    if not user:
+        spankMsg = random.choice(
+            ["W-who are you spanking, You perv! (#｀皿´)","Let me spank you instead? (｀ω´)","M-my master spank me when I'm a bad bot! (ノ﹏ヽ)","Don't you dare to spank me! ლಠ益ಠ)ლ","Someone as been bad to you, {}?".format(ctx.message.author.mention)])
+        await client.say(spankMsg)
+    else:
+        if user.mention == ctx.message.author.mention:
+            spankMsg = random.choice(["D-do you likes it, nya?","Why are you spanking yourself?","Masochist much, {}?".format(ctx.message.author.mention)],"*Enjoys the view*. I-I'm not a perv, I swear! NYA!","Are you just teasing someone? *feels tempted*."])
+            await client.send_file(channel, io.BytesIO(response.raw.read()), filename="spank.gif", content=spankMsg)
+        elif user.name == client.user.name:
+            spankMsg = random.choice(["H-hey that's hurt! S-stop it!","Why me. (இ﹏இ`｡) I did anything bad!","S-stop spankign me, nya! W-wait.. actually I likes it... *blushu*","No no no! Not me! I bet Moist likes it more!","Yamete kudasai senpai! I'm innocent! ((;ﾟДﾟ))"])
+            await client.send_file(channel, io.BytesIO(response.raw.read()), filename="spank.gif", content=spankMsg)
+        else:
+            spankMsg = random.choice(["*Spanku spanku* you have been a bad kitten, {}".format(user.mention),"{0} stop being meanie to {1}!!!".format(user.mention, ctx.message.author.mention),"*Spank!* Y-you likes it {}? Want more? *grin intensify*".format(user.mention),"I-I might like that too! Oh my, what I'm saying...((-ω-｡)(｡-ω-))","*Lewdie spank* and *spank more* ... *spank spank spank spank spank!* I'm satisfied. (○ﾟε＾○)v"])
+            await client.send_file(channel, io.BytesIO(response.raw.read()), filename="spank.gif", content=spankMsg)
+            
+@client.command(pass_context=True)
 async def bot(ctx):
 # Bot Commands Info
     embed = discord.Embed(
@@ -146,7 +167,8 @@ async def bot(ctx):
     "3: !yorha (For those that feels a bit \"android\")\n"
     "4: !bot (Huh? Don't you remember me, nya? *puppy eyes*)\n" 
     "5: !nya (Because everyone is a kitten inside)\n"
-    "6: !pet (Who doesn't love pet?)\n",
+    "6: !pet (Who doesn't love pet?)\n"
+    "7: !spank (A good spank is good?)\n",
     inline=False
 )
     embed.set_image(url="https://cdn.discordapp.com/attachments/356158413861814273/356237516585566208/5ka93GJ.png")
