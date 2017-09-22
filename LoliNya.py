@@ -139,7 +139,7 @@ async def spank(ctx, user: discord.User = None):
             spankMsg = random.choice(["D-do you likes it, nya?","Why are you spanking yourself?","Masochist much, {}?".format(ctx.message.author.mention),"*Enjoys the view*. I-I'm not a perv, I swear! NYA!","Are you just teasing someone? *feels tempted*."])
             await client.send_file(channel, io.BytesIO(response.raw.read()), filename="spank.gif", content=spankMsg)
         elif user.name == client.user.name:
-            spankMsg = random.choice(["H-hey that's hurt! S-stop it!","Why me. (இ﹏இ`｡) I did anything bad!","S-stop spankign me, nya! W-wait.. actually I likes it... *blushu*","No no no! Not me! I bet Moist likes it more!","Yamete kudasai senpai! I'm innocent! ((;ﾟДﾟ))"])
+            spankMsg = random.choice(["H-hey that's hurt! S-stop it!","Why me. (இ﹏இ`｡) I did anything bad!","S-stop spanking me, nya! W-wait.. actually I likes it... *blushu*","No no no! Not me! I bet Moist likes it more!","Yamete kudasai senpai! I'm innocent! ((;ﾟДﾟ))"])
             await client.send_file(channel, io.BytesIO(response.raw.read()), filename="spank.gif", content=spankMsg)
         else:
             spankMsg = random.choice(["*Spanku spanku* you have been a bad kitten, {}".format(user.mention),"{0} stop being meanie to {1}!!!".format(user.mention, ctx.message.author.mention),"*Spank!* Y-you likes it {}? Want more? *grin intensify*".format(user.mention),"I-I might like that too! Oh my, what I'm saying...((-ω-｡)(｡-ω-))","*Lewdie spank* and *spank more* ... *spank spank spank spank spank!* I'm satisfied. (○ﾟε＾○)v"])
