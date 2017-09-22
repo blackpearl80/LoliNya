@@ -136,7 +136,7 @@ async def spank(ctx, user: discord.User = None):
         await client.say(spankMsg)
     else:
         if user.mention == ctx.message.author.mention:
-            spankMsg = random.choice(["D-do you likes it, nya?","Why are you spanking yourself?","Masochist much, {}?".format(ctx.message.author.mention)],"*Enjoys the view*. I-I'm not a perv, I swear! NYA!","Are you just teasing someone? *feels tempted*."])
+            spankMsg = random.choice(["D-do you likes it, nya?","Why are you spanking yourself?","Masochist much, {}?".format(ctx.message.author.mention),"*Enjoys the view*. I-I'm not a perv, I swear! NYA!","Are you just teasing someone? *feels tempted*."])
             await client.send_file(channel, io.BytesIO(response.raw.read()), filename="spank.gif", content=spankMsg)
         elif user.name == client.user.name:
             spankMsg = random.choice(["H-hey that's hurt! S-stop it!","Why me. (இ﹏இ`｡) I did anything bad!","S-stop spankign me, nya! W-wait.. actually I likes it... *blushu*","No no no! Not me! I bet Moist likes it more!","Yamete kudasai senpai! I'm innocent! ((;ﾟДﾟ))"])
