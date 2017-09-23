@@ -150,8 +150,9 @@ async def poke(ctx, user: discord.User = None):
     channel = ctx.message.channel
     response = requests.get("https://imgur.com/" + pokeRnd + ".gif", stream=True)
     if not user:
-        pokeMsg = random.choice(["","",""])
-        await client.say(pokeMsg)
+        #pokeMsg = random.choice(["","",""])
+        #await client.say(pokeMsg)
+        return
     else:
         if user.mention == ctx.message.author.mention:
             pokeMsg = random.choice(["I won't allow that! NYA.","Self pokes are BAD, you are BAD!","Are you asking me to poke you? *blushu*"])
