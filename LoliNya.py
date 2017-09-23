@@ -64,8 +64,9 @@ async def hug(ctx, user: discord.Member = None):
     channel = ctx.message.channel
     response = requests.get("https://media.giphy.com/media/" + hugRnd + "/giphy.gif", stream=True)
     if not user:
-        hugR = random.choice(["*Evades and throw you a pillow.* H-hey nya, don't try hug me! (/ω＼)","Σ(￣ロ￣lll) da heck you are hugging? Are you crazy?","Nya bruh. If you are so desperate to hug something, t-try a train at 100km/h!","Error 404. Object to hug not found. please try again nya!"])
-        await client.say(hugR)
+        #hugR = random.choice(["*Evades and throw you a pillow.* H-hey nya, don't try hug me! (/ω＼)","Σ(￣ロ￣lll) da heck you are hugging? Are you crazy?","Nya bruh. If you are so desperate to hug something, t-try a train at 100km/h!","Error 404. Object to hug not found. please try again nya!"])
+        #await client.say(hugR)
+        return
     #elif user.mention == user.mention_everyone:
     #await client.say("Th-this isn't a or-org... I mean everyone as been hugged. (/ε＼*)")
     else:
@@ -86,8 +87,9 @@ async def pet(ctx, user: discord.Member = None):
     channel = ctx.message.channel
     response = requests.get("https://media.giphy.com/media/" + petRnd + "/giphy.gif", stream=True)
     if not user:
-        petR = random.choice(["P-pet me please! (* >ω<)=3","Are you trying to pet someone? (๑˃̵ᴗ˂̵)و","Pets are good nya! (￣∇￣)","I would love that pet. Can I have one please, nya? （●＞ω＜●）"])
-        await client.say(petR)
+        #petR = random.choice(["P-pet me please! (* >ω<)=3","Are you trying to pet someone? (๑˃̵ᴗ˂̵)و","Pets are good nya! (￣∇￣)","I would love that pet. Can I have one please, nya? （●＞ω＜●）"])
+        #await client.say(petR)
+        return
     #elif user.mention == user.mention_everyone:
     #await client.say("Th-this isn't a or-org... I mean everyone as been hugged. (/ε＼*)")
     else:
@@ -108,8 +110,9 @@ async def slap(ctx, user: discord.User = None):
     channel = ctx.message.channel
     response = requests.get("https://media.giphy.com/media/" + slapRnd + "/giphy.gif", stream=True)
     if not user:
-        slapMsg = random.choice(['Nya. Your slap had no effect, you silly!', 'Are you trying to kill mosquitoes or something, nya?'])
-        await client.say(slapMsg)
+        #slapMsg = random.choice(['Nya. Your slap had no effect, you silly!', 'Are you trying to kill mosquitoes or something, nya?'])
+        #await client.say(slapMsg)
+        return
     else:
         if user.mention == ctx.message.author.mention:
             slapMsg = random.choice(['Should I slap you instead? （≧ｙ≦＊）', 'Such violence (つ﹏⊂), a-are you hurt {}?'.format(ctx.message.author.mention)])
@@ -130,8 +133,9 @@ async def spank(ctx, user: discord.User = None):
     channel = ctx.message.channel
     response = requests.get("https://imgur.com/" + spankRnd + ".gif", stream=True)
     if not user:
-        spankMsg = random.choice(["W-who are you spanking, You perv! (#｀皿´)","Let me spank you instead? (｀ω´)","M-my master spank me when I'm a bad bot! (ノ﹏ヽ)","Don't you dare to spank me! ლಠ益ಠ)ლ","Someone as been bad to you, {}?".format(ctx.message.author.mention)])
-        await client.say(spankMsg)
+        #spankMsg = random.choice(["W-who are you spanking, You perv! (#｀皿´)","Let me spank you instead? (｀ω´)","M-my master spank me when I'm a bad bot! (ノ﹏ヽ)","Don't you dare to spank me! ლಠ益ಠ)ლ","Someone as been bad to you, {}?".format(ctx.message.author.mention)])
+        #await client.say(spankMsg)
+        return
     else:
         if user.mention == ctx.message.author.mention:
             spankMsg = random.choice(["D-do you likes it, nya?","Why are you spanking yourself?","Masochist much, {}?".format(ctx.message.author.mention),"*Enjoys the view*. I-I'm not a perv, I swear! NYA!","Are you just teasing someone? *feels tempted*."])
