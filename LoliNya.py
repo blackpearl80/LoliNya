@@ -187,7 +187,9 @@ async def bot(ctx):
     "3: !yorha (For those that feels a bit \"android\")\n"
     "4: !bot (Huh? Don't you remember me, nya? *puppy eyes*)\n" 
     "5: !nya (Because everyone is a kitten inside)\n"
-    "6: !pet (Who doesn't love pet?)\n""7: !spank (A good spank is good?)\n",
+    "6: !pet (Who doesn't love pet?)\n"
+    "7: !spank (A good spank is good?)\n"
+    "8: !poke (Pokes are good. Don't be lewd tho!)\n",
     inline=False
 )
     embed.set_image(url="https://cdn.discordapp.com/attachments/356158413861814273/356237516585566208/5ka93GJ.png")
