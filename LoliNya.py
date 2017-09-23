@@ -143,7 +143,7 @@ async def spank(ctx, user: discord.User = None):
             spankMsg = random.choice(["*Spanku spanku* you have been a bad kitten, {}".format(user.mention),"{0} stop being meanie to {1}!!!".format(user.mention, ctx.message.author.mention),"*Spank!* Y-you likes it {}? Want more? *grin intensify*".format(user.mention),"I-I might like that too! Oh my, what I'm saying...((-ω-｡)(｡-ω-))","*Lewdie spank* and *spank more* ... *spank spank spank spank spank!* I'm satisfied. (○ﾟε＾○)v"])
             await client.send_file(channel, io.BytesIO(response.raw.read()), filename="spank.gif", content=spankMsg)
 
-        @client.command(pass_context=True)
+@client.command(pass_context=True)
 async def poke(ctx, user: discord.User = None):
     # Show a random image when using the command !spank
     pokeRnd = random.choice(["yITI94s","CaXE0fX","3s6cBSh","FJxZhEI","SjjHjqU","sRvh3pA","hHqkKcE","hRseqxj","1tcQnAX","dirFXV6","CYGTaXK","d9xY2dw"])
