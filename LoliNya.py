@@ -165,7 +165,7 @@ async def poke(ctx, user: discord.User = None):
             pokeMsg = random.choice(["Eeeek. Why are you poking me!?","Ouch, you shouldn't poke me so hard. Meanie.","*blushu* w-where you are poking me, you perv. N-nya!","Abusing of a poor innocent bot, do you?","Poking me like that... it tickles!"])
             await client.send_file(channel, io.BytesIO(response.raw.read()), filename="poke.gif", content=pokeMsg)
         else:
-            pokeMsg = random.choice(["*Pokes {0}*. {1}, I-I'm innocent!".format(user.name, ctx.message.author.mention),"Does this poke feels good {}, nya?".format(user.mention),"You have been poked from {}.".format(ctx.message.author.mention),"Sneak poke {0}! Will you poke me too {1}?".format(user.mention, ctx.message.author.mention)])
+            pokeMsg = random.choice(["*Pokes {0}*. {1}, I-I'm innocent!".format(user.mention, ctx.message.author.mention),"Does this poke feels good {}, nya?".format(user.mention),"You have been poked from {}.".format(ctx.message.author.mention),"Sneak poke {0}! Will you poke me too {1}?".format(user.mention, ctx.message.author.mention)])
             await client.send_file(channel, io.BytesIO(response.raw.read()), filename="poke.gif", content=pokeMsg)
 
 @client.command(pass_context=True)
