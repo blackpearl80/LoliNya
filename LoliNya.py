@@ -68,7 +68,7 @@ async def hug(ctx, user: discord.Member = None):
         #await client.say(hugR)
     #elif user.mention == user.mention_everyone:
         #await client.say("Th-this isn't a or-org... I mean everyone as been hugged. (/ε＼*)")
-    else:
+        else:
         if user.mention == ctx.message.author.mention:
             hugR = random.choice(["So sad. You must be feeling so lonely... (⋟﹏⋞)","Are you feeling cold?","Nya... so pitiful. (´・ω・｀)","Amaaazing nya! You can actually hug yourself! Congratz {}. (￣ε￣〃)ｂ".format(ctx.message.author.mention),"You hugged yourself! That's a nice improvement!"])
             await client.send_file(channel, io.BytesIO(response.raw.read()), filename="hug.gif", content=hugR)
@@ -90,7 +90,7 @@ async def pet(ctx, user: discord.Member = None):
         #await client.say(petR)
     #elif user.mention == user.mention_everyone:
         #await client.say("Th-this isn't a or-org... I mean everyone as been hugged. (/ε＼*)")
-    else:
+        else:
         if user.mention == ctx.message.author.mention:
             petR = random.choice(["Y-you can't seriously pet yourself nya... Σ(ﾟДﾟ)","Are you brushing your hairs just to look cool? (ー∀ー；)","Does pet yourself feels good, {}?".format(ctx.message.author.mention),"Try and find someone else to pet instead yourself! (´ε｀；)","M-maybe I'll let you pet me if you are nice."])
             await client.send_file(channel, io.BytesIO(response.raw.read()), filename="pet.gif", content=petR)
@@ -111,7 +111,7 @@ async def slap(ctx, user: discord.User = None):
         #slapMsg = random.choice(
          #   ['Nya. Your slap had no effect, you silly!', 'Are you trying to kill mosquitoes or something, nya?'])
         #await client.say(slapMsg)
-    else:
+        else:
         if user.mention == ctx.message.author.mention:
             slapMsg = random.choice(['Should I slap you instead? （≧ｙ≦＊）', 'Such violence (つ﹏⊂), a-are you hurt {}?'.format(ctx.message.author.mention)])
             await client.send_file(channel, io.BytesIO(response.raw.read()), filename="slap.gif", content=slapMsg)
@@ -134,7 +134,7 @@ async def spank(ctx, user: discord.User = None):
         #spankMsg = random.choice(
          #   ["W-who are you spanking, You perv! (#｀皿´)","Let me spank you instead? (｀ω´)","M-my master spank me when I'm a bad bot! (ノ﹏ヽ)","Don't you dare to spank me! ლಠ益ಠ)ლ","Someone as been bad to you, {}?".format(ctx.message.author.mention)])
         #await client.say(spankMsg)
-    else:
+        else:
         if user.mention == ctx.message.author.mention:
             spankMsg = random.choice(["D-do you likes it, nya?","Why are you spanking yourself?","Masochist much, {}?".format(ctx.message.author.mention),"*Enjoys the view*. I-I'm not a perv, I swear! NYA!","Are you just teasing someone? *feels tempted*."])
             await client.send_file(channel, io.BytesIO(response.raw.read()), filename="spank.gif", content=spankMsg)
@@ -154,7 +154,7 @@ async def poke(ctx, user: discord.User = None):
     if not user:
         #pokeMsg = random.choice(["","",""])
         #await client.say(pokeMsg)
-    else:
+        else:
         if user.mention == ctx.message.author.mention:
             pokeMsg = random.choice(["I won't allow that! NYA.","Self pokes are BAD, you are BAD!","Are you asking me to poke you? *blushu*"])
             await client.send_file(channel, io.BytesIO(response.raw.read()), filename="poke.gif", content=pokeMsg)
