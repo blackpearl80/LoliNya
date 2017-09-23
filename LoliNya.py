@@ -165,7 +165,7 @@ async def poke(ctx, user: discord.User = None):
             pokeMsg = random.choice(["Eeeek. Why are you poking me!?","Ouch, you shouldn't poke me so hard. Meanie.","*blushu* w-where you are poking me, you perv. N-nya!","Abusing of a poor innocent bot, do you?","Poking me like that... it tickles!"])
             await client.send_file(channel, io.BytesIO(response.raw.read()), filename="poke.gif", content=pokeMsg)
         else:
-            pokeMsg = random.choice(["*Pokes {0}*. {1}, I-I'm innocent!".format(user.name, ctx.message.author.mention),"Does this poke feels good {}, nya?".format(user.mention),"You have been poked from {}".format(ctx.message.author.mention),"Sneak poke {0}! Will you poke me too {1}?".format(user.mention, ctx.message.author.mention)])
+            pokeMsg = random.choice(["*Pokes {0}*. {1}, I-I'm innocent!".format(user.name, ctx.message.author.mention),"Does this poke feels good {}, nya?".format(user.mention),"You have been poked from {}.".format(ctx.message.author.mention),"Sneak poke {0}! Will you poke me too {1}?".format(user.mention, ctx.message.author.mention)])
             await client.send_file(channel, io.BytesIO(response.raw.read()), filename="poke.gif", content=pokeMsg)
 
 @client.command(pass_context=True)
@@ -190,7 +190,9 @@ async def bot(ctx):
               "3: !yorha (For those that feels a bit \"android\")\n"
               "4: !bot (Huh? Don't you remember me, nya? *puppy eyes*)\n"
               "5: !nya (Because everyone is a kitten inside)\n"
-              "6: !pet (Who doesn't love pet?)\n""7: !spank (A good spank is good?)\n",
+              "6: !pet (Who doesn't love pet?)\n"
+              "7: !spank (A good spank is good?)\n"
+              "8: !poke (Pokes are fun! Don't be lewd tho!)\n",
         inline=False
     )
     embed.set_image(url="https://cdn.discordapp.com/attachments/356158413861814273/356237516585566208/5ka93GJ.png")
