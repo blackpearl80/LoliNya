@@ -211,4 +211,4 @@ async def bot(ctx):
     await asyncio.sleep(5)
     await client.delete_message(msg1)
 
-client.run('MzU2MTYwODU1Njg1MjAxOTIx.DJc5WA.FFrO4uDlZXPCN-jsuJvhOYSOlCc')
+client.run('MzU2MTYwODU1Njg1MjAxOTIx.DONKoQ.UIiJY64x2HBU10Mdd8XZyDuYGvM')
